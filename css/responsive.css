@@ -1,0 +1,19 @@
+/* Large Layout (Laptop): 992px - 1999px */
+@media all and (max-width: 1999px){
+
+}
+
+/* Medium Layout (Tablet): 768px - 991px */
+@media all and (max-width: 991px){
+    
+}
+
+/* Small Layout (Tablet Small): 576px - 767px */
+@media all and (max-width: 767px){
+    
+}
+
+/* Extra Small Layout (Mobile): 1px - 575px */
+@media all and (max-width: 575px){
+    
+}

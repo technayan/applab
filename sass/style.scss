@@ -1,0 +1,1042 @@
+/* Import Files */
+@import "reset";
+@import "variables";
+
+/* Navbar CSS Start */
+.navbar{
+    padding: 1rem 0;
+    @include mq(991.98px){
+        box-shadow: 0 1px 7px 0px #d6d6d6;
+    }
+    .navbar-brand{
+        font-size: 3rem;
+        font-weight: 700;
+        color: $heading-color;
+        display: block;
+        text-align: center;
+        span{
+            color: #fcae61;
+        }
+    }
+}
+.navbar-nav{
+    @include mq(991.98px){
+        margin-top: 1rem;
+    }
+    .nav-link{
+        padding: 0 2rem !important;
+        color: $heading-color !important;
+        @include mq(991.98px){
+            font-weight: 500;
+            text-align: center;
+            padding: 1.5rem 0 !important;
+        }
+        &:hover{
+            color: $primary-color !important;
+        }
+    }
+    .active{
+        color: $primary-color !important;
+    }
+} 
+.action-btn{
+    margin-left: 3rem;
+    @include mq(991.98px){
+        display: none;
+    }
+
+}
+.navbar-toggler{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 4rem;
+    padding: 0 !important;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    color: transparent !important;
+    &:focus{
+        outline: none !important;
+    }
+    .menu-btn__burger{
+        width: 4rem;
+        height: 0.3rem;
+        background: $heading-color;
+        border-radius: 0.5rem;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        &::before,
+        &::after{
+            content:"";
+            position: absolute;
+            width: 3rem;
+            height: 0.3rem;
+            top:0;
+            left: 0;
+            background: $heading-color;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+        &::before{
+            transform: translateY(-1.1rem);
+        }
+        &::after{
+            transform: translateY(1.1rem);
+        }
+    }
+}
+
+.shadow{
+    box-shadow: 0px 1px 7px #d6d6d6;
+}
+/* Navbar CSS End */
+
+/* Hero Section CSS Start */
+.hero-area-wrapper{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-image: url(../assets/city.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq(991.98px){
+        padding-bottom: 6rem;
+    }
+    @include mq(767.98px){
+        padding-bottom: 0rem;
+    }
+    .hero-row{
+        position: relative;
+        .hero-shapes{
+            height: 0;
+            .geo-shape{
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                @include mq(991.98px){
+                    display: none;
+                }
+            }
+            .circle-1{
+                top: 5rem;
+                left: -5rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    top: 3rem;
+                    left: 3rem;
+                }
+            }
+            .circle-2{
+                top: 0;
+                right: 32rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    right: 18rem;
+                }
+            }
+            .square{
+                top: 13rem;
+                left: 36rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    top: 6rem;
+                    left: 27rem;
+                }
+            }
+            .times-1{
+                bottom: 12rem;
+                left: -8rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    bottom: 6rem;
+                    left: 3rem;
+                }
+            }
+            .times-2{
+                bottom: 20rem;
+                left: 55rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    bottom: 15rem;
+                    left: 48rem;
+                }
+            }
+            .circle-3{
+                bottom: 6rem;
+                left: 20rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    bottom: 5rem;
+                    left: 23rem;
+                }
+            }
+            .circle-4{
+                bottom: 6rem;
+                right: -2rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                @include mq(1199.98px){
+                    bottom: 1rem;
+                    right: 5rem;
+                }
+            }
+            .plus{
+                bottom: 3rem;
+                left: 43rem;
+                animation-name: spin;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+        }
+        .editors-choice{
+            background: #e1eaed;
+            border-radius: 2rem;
+            height: 4rem;
+            min-width: 36rem;
+            @include mq(991.98px){
+                margin-top: 8rem;
+            }
+            @include mq(575.98px){
+                height: 3rem;
+                min-width: 30rem;
+            }
+            .editors-choice-img{
+                background: #fda925;
+                padding: 1rem;
+                border-radius: 2rem;
+                @include mq(575.98px){
+                    padding: 0.5rem;
+                }
+            }
+            p.editor-text{
+                margin-left: 1rem;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                color: $heading-color;
+                @include mq(575.98px){
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .hero-heading{
+            font-size: 6rem;
+            line-height: 75px;
+            color: #242f51;
+            @include mq(575.98px){
+                font-size: 4.5rem;
+                line-height: 58px;
+            }
+            @include mq(767.98px){
+                font-size: 4.5rem;
+                line-height: 60px;
+                margin-top: 1rem;
+            }
+            @include mq(991.98px){
+                font-size: 5rem;
+                line-height: 60px;
+                margin-top: 1rem;
+            }
+        }
+        .hero-desc{
+            @include mq(575.98px){
+                width: 80%;
+            }
+        }
+        .hero-btn{
+            @include mq(575.98px){
+                margin-top: 5rem !important;
+            }
+            .demo-btn{
+                margin-left: 2rem;
+                color: $primary-color;
+                &:hover{
+                    color: $primary-color;
+                }
+                @include mq(575.98px){
+                    display: block;
+                    margin: 1rem 0 0 0;
+                    padding: 1rem;
+                }
+            }
+        }
+        .hero-mobile{
+            margin-left: 4rem;
+            @include mq(575.98px){
+                width: 70%;
+                margin-top: 3rem;
+            }
+            @include mq(767.98px){
+                margin-left: 2rem;
+            }
+            @include mq(991.98px){
+                margin-top: 3rem;
+            }
+            @include mq(1199.98px){
+                width: 90%;
+            }
+        }
+    }
+}
+
+    /* Animation */
+    @keyframes spin {
+        0%  { transform: translateX(0px) rotate(0deg);}
+        50% { transform: translateX(80px) rotate(360deg);}
+        100% { transform: translateX(0px) rotate(0deg);}
+    }
+
+/* Hero Section CSS End */
+
+/* Trusted Companies Section CSS Start */
+.trusted-companies{
+    padding: 7rem 0;
+    @include mq(767.98px){
+        padding: 5rem 0;
+    }
+    .trusted-companies-heading{
+        color: $heading-color;
+    }
+    .owl-carousel{
+        height: 8.4rem;
+        .owl-stage{
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .item{
+            width: 16rem;
+            padding: 2.1rem;
+            img.company-logo{
+                width: 100%;
+            }
+        }
+    }
+}
+/* Trusted Companies Section CSS End */
+
+/* Awesome Apps Features Section CSS Start */
+.app-features{
+    .section-heading{
+        @include sec-title();
+        @include mq(767.98px){
+            text-align: center;
+            margin: auto;
+        }
+    }
+    .section-desc{
+        width: 50rem;
+        @include mq(767.98px){
+            width: 45rem;
+            text-align: center;
+            margin: auto;
+        }
+        @include mq(991.98px){
+            width: 34rem !important;
+        }
+        @include mq(1199.98px){
+            width: 45rem;
+        }
+    }
+    .features-wrapper{
+        .feature{
+            margin-top: 5rem;
+            @include mq(991.98px){
+                margin-top: 2rem;
+            }
+            .pink-bg{
+                 @include icon-bg($light-pink);
+            }
+            .blue-bg{
+                @include icon-bg($light-blue);
+           }
+            .green-bg{
+                @include icon-bg($light-green);
+            }
+        }
+    }
+}
+
+.feature-info {
+    margin-left: 2rem;
+    .feature-title{
+        font-size: 2rem;
+    }
+    .pink{
+        color: $pink;
+    }
+    .blue{
+        color: $blue;
+    }
+    .green{
+        color: $green;
+    }
+}
+/* Awesome Apps Features Section CSS End */
+
+/* Jackpot Section CSS Start */
+.jackpot-section{
+    padding-top: 0 !important;
+    .heading-row{
+        @include mq(767.98px){
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+    .section-heading{
+        @include sec-title();
+        @include mq(767.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .section-desc{
+        padding-left: 4.5rem;
+        border-left: 0.1rem solid #4b4a47;
+        height: 14.5rem;
+        @include mq(767.98px){
+            padding-left: 0;
+            border-left: 0;
+            text-align: center;
+            height: 11.5rem;
+        }
+        
+    }
+    .jackpot-feature-row{
+        padding-top: 0 !important;
+    }
+    .jackpot-feature{
+        @include mq(767.98px){
+            text-align: center;
+            margin-top: 3rem;
+        }
+    }
+    figure{
+        width: 8.8rem;
+        height: 8.8rem;
+        @include mq(767.98px){
+            margin: auto;
+        }
+    }
+    .pink-bg{
+        @include icon-bg($light-pink);
+    }
+    .blue-bg{
+       @include icon-bg($light-blue);
+    }
+    .green-bg{
+       @include icon-bg($light-green);
+    }
+    .feature-title{
+        font-size: 2rem;
+    }
+    .pink{
+        color: $pink;
+    }
+    .blue{
+        color: $blue;
+    }
+    .green{
+        color: $green;
+    }
+    .feature-desc{
+        width: 75%;
+        @include mq(767.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mq(575.98px){
+            width: 90%;
+        }
+    }
+    
+}
+/* Jackpot Section CSS End */
+
+/* Design Section CSS Start */
+.design-section{
+    border-bottom: 0.1rem #f4f4f4;
+    .section-info{
+        @include mq(767.98px){
+            text-align: center;
+        }
+        
+    }
+    .section-heading{
+        @include sec-title();
+        @include mq(767.98px){
+            margin-top: 5rem;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+}
+/* Design Section CSS End */
+
+/* Choose Our App Section CSS Start */
+.choose-our-app-section{
+    .section-heading{
+        @include sec-title();
+    }
+    .section-desc{
+        width: 58%;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        @include mq(1099.98px){
+            width: 70%;
+        }
+        @include mq(991.98px){
+            width: 100%;
+        }
+    }
+    .choose-app{
+        margin-top: 6rem;
+        @include mq(767.98px){
+            margin-top: 3rem;
+        }
+        figure{
+            width: 8.8rem;
+            height: 8.8rem;
+            margin: auto;
+        }
+        .dev-icon{
+            @include icon-bg(#ffecef);
+        }
+        .award-icon{
+            @include icon-bg(#eaf9ff);
+        }
+        .cloud-icon{
+            @include icon-bg(#fff6d3);
+        }
+        .customize-icon{
+            @include icon-bg(#eaffee);
+        }
+        .ux-icon{
+            @include icon-bg(#f4f4ff);
+        }
+        .support-icon{
+            @include icon-bg(#fdeee4);
+        }
+        .feature-title{
+            font-size: 2rem;
+            color: $heading-color;
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .feature-desc{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+/* Choose Our App Section CSS End */
+
+/* Ultimate Features Section CSS Start */
+.ultimate-features-section{
+    .section-heading{
+        @include sec-title();
+        max-width: 40rem;
+        @include mq(991.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .section-desc{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        width: 80%;
+        @include mq(991.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mq(575.98px){
+            width: 100%;
+        }
+    }
+    .ultimate-feature{
+        margin-top: 4.5rem;
+        @include mq(767.98px){
+            margin-top: 3rem;
+        }
+        figure{
+            width: 8.8rem;
+            height: 8.8rem;
+            @include mq(991.98px){
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .dev-icon{
+            @include icon-bg(#ffecef);
+        }
+        .ux-icon{
+            @include icon-bg(#f4f4ff);
+        }
+        .cloud-icon{
+            @include icon-bg(#fff6d3);
+        }
+        .support-icon{
+            @include icon-bg(#fdeee4);
+        }
+        .feature-title{
+            font-size: 2rem;
+            color: $heading-color;
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
+            @include mq(991.98px){
+                text-align: center;
+            }
+        }
+        .feature-desc{
+            width: 92%;
+            @include mq(991.98px){
+                width: 80%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .ultimate-feature-img{
+        @include mq(991.98px){
+            margin-top: 5rem;
+        }
+    }
+    .default-btn{
+        max-width: 17rem;
+        margin-top: 4rem;
+        @include mq(991.98px){
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+/* Ultimate Features Section CSS End */
+
+/* Pricing Section CSS Start */
+.pricing-section{
+    border-bottom: 2px solid #f4f4f4;
+    .section-heading{
+        @include sec-title();
+        max-width: 60rem;
+    }
+    .section-desc{
+        width: 58%;
+        margin-top: 2rem;
+        @include mq(575.98px){
+            width: 100%;
+        }
+    }
+    .pricing-tab{
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        width: 28rem;
+        height: 5.5rem;
+        border: 0.2rem solid #ebebeb;
+        border-radius: 4rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.3rem;
+        button{
+            width: 100%;
+            height: 100%;
+            border-radius: 4rem;
+            border: none;
+            background: none;
+            color: $text-color;
+            font-weight: 500;
+        }
+        .active{
+            background: $primary-color;
+            color: #fff;
+        }
+    }
+    
+    .pricing-card-wrapper{
+        box-shadow: 0 0 20px 0.5px #f1f1f1;
+        &:hover{
+            box-shadow: 0 0 10px 1px #dddddd;
+        }
+        @include mq(991.98px){
+            margin-top: 2rem;
+            border: 2px solid #ebebeb;
+        }
+        border-radius: 1rem;
+        .pricing-card-header{
+            padding: 4rem 0 2.2rem;
+            background: linear-gradient(#fdfdfe, #f4f6f9);
+            border-radius: 1rem 1rem 0 0;
+            @include mq(991.98px){
+                padding: 2rem 0;
+            }
+            p{
+                color: #999ca5;
+                .amount{
+                    font-size: 6rem;
+                    font-weight: 600;
+                    display: inline-block;
+                    color: $heading-color;
+                    @include mq(991.98px){
+                        font-size: 5rem;
+                    }
+                    @include mq(767.98px){
+                        font-size: 4rem;
+                    }
+                }
+            }
+            .package-title{
+                font-size: 2rem;
+                color: $heading-color;
+            }
+        }
+        .pricing-card-features{
+            padding: 4rem 0 2.5rem;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin-bottom: 2rem;
+                li{
+                    padding: 1.2rem 0;
+                    color: #999ca5;
+                }
+            }
+            .trial-link{
+                color: $primary-color;
+                display: block;
+                margin-top: 2rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+    .focused{
+        border: 2px solid #ebebeb;
+    }
+}
+/* Pricing Section CSS End */
+
+/* Testimonial Section CSS Start */
+.testimonial-section{
+    position: relative;
+    .section-heading{
+        @include sec-title();
+        @include mq(991.98px){
+            text-align: center;
+            margin: 5rem auto 0;
+        }
+    }
+    .section-desc{
+        margin-top: 2rem;
+        @include mq(991.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .control{
+        position: absolute;
+        bottom: 3rem;
+        right: 0;
+        width: 12rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mq(575.98px){
+            right: 50%;
+            transform: translateX(50%);
+            bottom: -7rem;
+        }
+        hr{
+            width: 0.2rem;
+            height: 2.5rem;
+            margin: 0;
+        }
+    }
+    .carousel-control-next,
+    .carousel-control-prev{
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        border: 0.2rem solid #afaeae;
+        background: #fff;
+        &:hover{
+            background: #d8d8d8;
+            border: 0.2rem solid #d8d8d8;
+            svg{
+                stroke: $primary-color;
+            }
+        }
+    }
+    .stars{
+        margin: 3rem 0 2rem;
+    }
+    .review-subject{
+        font-size: 2rem;
+        color: $heading-color;
+        margin-bottom: 2rem;
+    }
+    .client{
+        margin-top: 5rem;
+        .client-info{
+            margin-left: 3rem;
+            .client-name{
+                font-size: 1.8rem;
+                color: $heading-color;
+            }
+            .client-designation{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+/* Testimonial Section CSS End */
+
+/* FAQ Section CSS Start */
+.faq-section{
+    border-bottom: 0.2rem solid #f4f4f4;
+    @include mq(575.98px){
+        padding-top: 10.5rem;
+    }
+    .section-heading{
+        @include sec-title();
+    }
+    .section-desc{
+        margin-top: 2rem;
+        width: 58%;
+        @include mq(575.98px){
+            width: 100%;
+        }
+    }
+    .accordion{
+        margin-top: 4.8rem;
+        .accordion-item{
+            background: #f5f7fa;
+            margin-bottom: 1rem;
+            .accordion-button{
+                border: none;
+                font-size: 2rem;
+                color: $heading-color;
+                font-weight: 600;
+                padding: 2.3rem 4.6rem;
+                @include mq(991.98px){
+                    padding: 2.3rem;
+                }
+                &:focus{
+                    background: none;
+                    box-shadow: none;
+                }
+                &:not(.collapsed){
+                    background: none;
+                    box-shadow: none;
+                }
+                &::after{
+                    background-image: url(../assets/icons/svg/dash.svg);
+                    background-size: cover;
+                    content: "";
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+            .collapsed{
+                &::after{
+                    background-image: url(../assets/icons/svg/plus.svg);
+                }
+            }
+            .accordion-collapse{
+                border: none !important;
+                .accordion-body{
+                    padding: 0 4.6rem 2.3rem;
+                    @include mq(991.98px){
+                        padding: 0 2.3rem 2.3rem;
+                    }
+                }
+                &:last-of-type .accordion-collapse{
+                    border-bottom-width: 0px !important;
+                    border-radius: 0px;
+                }
+            }
+        }
+    }
+}
+/* FAQ Section CSS End */
+
+/* Download App Section CSS Start */
+.download-app-section{
+    padding-bottom: 0;
+    margin-bottom: 7rem;
+    .section-heading{
+        @include sec-title();
+        @include mq(767.98px){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .section-desc{
+        margin-top: 2rem;
+        @include mq(767.98px){
+            text-align: center;
+        }
+    }
+    .app-download-wrapper{
+        margin-top: 3rem;
+        @include mq(767.98px){
+            text-align: center;
+        }
+        img{
+            margin-right: 2rem;
+            @include mq(767.98px){
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 3rem;
+                display: block;
+            }
+        }
+    }
+    .footer-img-div{
+        background-image: url(../assets/vector-art/footer-uper2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        margin-bottom: -7rem;
+        @include mq(991.98px){
+            height: 36rem;
+            margin-top: 5rem;
+        }
+        @include mq(767.98px){
+            height: 22rem;
+        }
+        @include mq(399.98px){
+            height: 19rem;
+        }
+        @include mq(299.98px){
+            height: 14rem;
+        }
+    }
+}
+/* Download App Section CSS End */
+
+/* Footer Section CSS Start */
+.footer-section{
+    padding: 7rem 0;
+    background: #09132d;
+    @include mq(767.98px){
+        padding: 4rem 0;
+    }
+    .footer-logo a{
+        font-size: 3rem;
+        font-weight: 700;
+        color: $white;
+        display: block;
+        text-align: center;
+        span{
+            color: #fcae61;
+        }
+    }
+    .footer-links{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        @include mq(767.98px){
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        li{
+            padding: 0 1.8rem;
+            @include mq(767.98px){
+                padding: 1.5rem 0;
+            }
+            &:hover a{
+                color: #fcae61 !important;
+            }
+        }
+    }
+    .social-links{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        @include mq(767.98px){
+            margin-top: 2rem;
+        }
+        li{
+            padding: 0 2rem;
+            font-size: 3rem;
+            a{
+                color: #273043;
+                &:hover {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    .copyright{
+        margin-top: 5rem;
+        text-align: center;
+        @include mq(767.98px){
+            margin-top: 2rem;
+        }
+        a{
+            color: #fff;
+            &:hover{
+                color: #fcae61 !important;
+            }
+        }
+    }
+}
+/* Footer Section CSS End */
+
+/* Bottom to Top Button CSS Start */
+.bottom-to-top{
+    position: fixed;
+    bottom: -4rem;
+    right: 1rem;
+    background: $primary-color;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    &:hover{
+        color: $white;
+    }
+}
+/* Bottom to Top Button CSS End */
+
+
+
+
+
+
+
+

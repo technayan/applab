@@ -1,0 +1,32 @@
+$poppins: 'Poppins', sans-serif;
+$primary-color: #2500f9;
+$heading-color: #242f51;
+$text-color: #616368;
+$pink: #f55767;
+$blue: #2563ff;
+$green: #40975f;
+$white: #ffffff;
+$light-pink: #ffebef;
+$light-blue: #f3f3ff;
+$light-green: #e3ffed;
+
+
+@mixin sec-title {
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    color: $heading-color;
+    max-width: 44rem;
+}
+
+@mixin icon-bg($bg-color) {
+    background: $bg-color;
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+
+@mixin mq($w){
+    @media (max-width: $w) {
+        @content;
+    }
+}
+

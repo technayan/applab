@@ -1,0 +1,1532 @@
+/* Import Files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1500px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+body {
+  color: #616368;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: 0px;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (min-width: 1500px) {
+  figure img {
+    min-width: 100%;
+  }
+}
+
+section {
+  padding: 7rem 0;
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+.default-btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  min-width: 17rem;
+  height: 5rem;
+  border-radius: 4rem;
+  border: 0.2rem solid #2500f9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #2500f9;
+  color: #ffffff;
+}
+
+.default-btn:hover {
+  background: #ffffff;
+  color: #2500f9;
+}
+
+/* Navbar CSS Start */
+.navbar {
+  padding: 1rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    box-shadow: 0 1px 7px 0px #d6d6d6;
+  }
+}
+
+.navbar .navbar-brand {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #242f51;
+  display: block;
+  text-align: center;
+}
+
+.navbar .navbar-brand span {
+  color: #fcae61;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+}
+
+.navbar-nav .nav-link {
+  padding: 0 2rem !important;
+  color: #242f51 !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 0 !important;
+  }
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2500f9 !important;
+}
+
+.navbar-nav .active {
+  color: #2500f9 !important;
+}
+
+.action-btn {
+  margin-left: 3rem;
+}
+
+@media (max-width: 991.98px) {
+  .action-btn {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 4rem;
+  padding: 0 !important;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  color: transparent !important;
+}
+
+.menu-btn:focus {
+  outline: none !important;
+}
+
+.menu-btn .menu-btn__burger {
+  width: 4rem;
+  height: 0.3rem;
+  background: #242f51;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .menu-btn__burger::before, .menu-btn .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  top: 0;
+  left: 0;
+  background: #242f51;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .menu-btn__burger::before {
+  transform: translateY(-1.1rem);
+}
+
+.menu-btn .menu-btn__burger::after {
+  transform: translateY(1.1rem);
+}
+
+.shadow {
+  box-shadow: 0px 1px 7px #d6d6d6;
+}
+
+/* Navbar CSS End */
+/* Hero Section CSS Start */
+.hero-area-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-image: url(../assets/city.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+  .hero-area-wrapper {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-area-wrapper {
+    padding-bottom: 0rem;
+  }
+}
+
+.hero-area-wrapper .hero-row {
+  position: relative;
+}
+
+.hero-area-wrapper .hero-row .hero-shapes {
+  height: 0;
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .geo-shape {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .geo-shape {
+    display: none;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .circle-1 {
+  top: 5rem;
+  left: -5rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .circle-1 {
+    top: 3rem;
+    left: 3rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .circle-2 {
+  top: 0;
+  right: 32rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .circle-2 {
+    right: 18rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .square {
+  top: 13rem;
+  left: 36rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .square {
+    top: 6rem;
+    left: 27rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .times-1 {
+  bottom: 12rem;
+  left: -8rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .times-1 {
+    bottom: 6rem;
+    left: 3rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .times-2 {
+  bottom: 20rem;
+  left: 55rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .times-2 {
+    bottom: 15rem;
+    left: 48rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .circle-3 {
+  bottom: 6rem;
+  left: 20rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .circle-3 {
+    bottom: 5rem;
+    left: 23rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .circle-4 {
+  bottom: 6rem;
+  right: -2rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-shapes .circle-4 {
+    bottom: 1rem;
+    right: 5rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-shapes .plus {
+  bottom: 3rem;
+  left: 43rem;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.hero-area-wrapper .hero-row .editors-choice {
+  background: #e1eaed;
+  border-radius: 2rem;
+  height: 4rem;
+  min-width: 36rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-area-wrapper .hero-row .editors-choice {
+    margin-top: 8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .editors-choice {
+    height: 3rem;
+    min-width: 30rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .editors-choice .editors-choice-img {
+  background: #fda925;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .editors-choice .editors-choice-img {
+    padding: 0.5rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .editors-choice p.editor-text {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #242f51;
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .editors-choice p.editor-text {
+    font-size: 1.6rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-heading {
+  font-size: 6rem;
+  line-height: 75px;
+  color: #242f51;
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .hero-heading {
+    font-size: 4.5rem;
+    line-height: 58px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-area-wrapper .hero-row .hero-heading {
+    font-size: 4.5rem;
+    line-height: 60px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-area-wrapper .hero-row .hero-heading {
+    font-size: 5rem;
+    line-height: 60px;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .hero-desc {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .hero-btn {
+    margin-top: 5rem !important;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-btn .demo-btn {
+  margin-left: 2rem;
+  color: #2500f9;
+}
+
+.hero-area-wrapper .hero-row .hero-btn .demo-btn:hover {
+  color: #2500f9;
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .hero-btn .demo-btn {
+    display: block;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+  }
+}
+
+.hero-area-wrapper .hero-row .hero-mobile {
+  margin-left: 4rem;
+}
+
+@media (max-width: 575.98px) {
+  .hero-area-wrapper .hero-row .hero-mobile {
+    width: 70%;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-area-wrapper .hero-row .hero-mobile {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-area-wrapper .hero-row .hero-mobile {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero-area-wrapper .hero-row .hero-mobile {
+    width: 90%;
+  }
+}
+
+/* Animation */
+@keyframes spin {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(80px) rotate(360deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+/* Hero Section CSS End */
+/* Trusted Companies Section CSS Start */
+.trusted-companies {
+  padding: 7rem 0;
+}
+
+@media (max-width: 767.98px) {
+  .trusted-companies {
+    padding: 5rem 0;
+  }
+}
+
+.trusted-companies .trusted-companies-heading {
+  color: #242f51;
+}
+
+.trusted-companies .owl-carousel {
+  height: 8.4rem;
+}
+
+.trusted-companies .owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+.trusted-companies .owl-carousel .item {
+  width: 16rem;
+  padding: 2.1rem;
+}
+
+.trusted-companies .owl-carousel .item img.company-logo {
+  width: 100%;
+}
+
+/* Trusted Companies Section CSS End */
+/* Awesome Apps Features Section CSS Start */
+.app-features .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+@media (max-width: 767.98px) {
+  .app-features .section-heading {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.app-features .section-desc {
+  width: 50rem;
+}
+
+@media (max-width: 767.98px) {
+  .app-features .section-desc {
+    width: 45rem;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .app-features .section-desc {
+    width: 34rem !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .app-features .section-desc {
+    width: 45rem;
+  }
+}
+
+.app-features .features-wrapper .feature {
+  margin-top: 5rem;
+}
+
+@media (max-width: 991.98px) {
+  .app-features .features-wrapper .feature {
+    margin-top: 2rem;
+  }
+}
+
+.app-features .features-wrapper .feature .pink-bg {
+  background: #ffebef;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.app-features .features-wrapper .feature .blue-bg {
+  background: #f3f3ff;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.app-features .features-wrapper .feature .green-bg {
+  background: #e3ffed;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.feature-info {
+  margin-left: 2rem;
+}
+
+.feature-info .feature-title {
+  font-size: 2rem;
+}
+
+.feature-info .pink {
+  color: #f55767;
+}
+
+.feature-info .blue {
+  color: #2563ff;
+}
+
+.feature-info .green {
+  color: #40975f;
+}
+
+/* Awesome Apps Features Section CSS End */
+/* Jackpot Section CSS Start */
+.jackpot-section {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section .heading-row {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.jackpot-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section .section-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.jackpot-section .section-desc {
+  padding-left: 4.5rem;
+  border-left: 0.1rem solid #4b4a47;
+  height: 14.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section .section-desc {
+    padding-left: 0;
+    border-left: 0;
+    text-align: center;
+    height: 11.5rem;
+  }
+}
+
+.jackpot-section .jackpot-feature-row {
+  padding-top: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section .jackpot-feature {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+.jackpot-section figure {
+  width: 8.8rem;
+  height: 8.8rem;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section figure {
+    margin: auto;
+  }
+}
+
+.jackpot-section .pink-bg {
+  background: #ffebef;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.jackpot-section .blue-bg {
+  background: #f3f3ff;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.jackpot-section .green-bg {
+  background: #e3ffed;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.jackpot-section .feature-title {
+  font-size: 2rem;
+}
+
+.jackpot-section .pink {
+  color: #f55767;
+}
+
+.jackpot-section .blue {
+  color: #2563ff;
+}
+
+.jackpot-section .green {
+  color: #40975f;
+}
+
+.jackpot-section .feature-desc {
+  width: 75%;
+}
+
+@media (max-width: 767.98px) {
+  .jackpot-section .feature-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jackpot-section .feature-desc {
+    width: 90%;
+  }
+}
+
+/* Jackpot Section CSS End */
+/* Design Section CSS Start */
+.design-section {
+  border-bottom: 0.1rem #f4f4f4;
+}
+
+@media (max-width: 767.98px) {
+  .design-section .section-info {
+    text-align: center;
+  }
+}
+
+.design-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+@media (max-width: 767.98px) {
+  .design-section .section-heading {
+    margin-top: 5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Design Section CSS End */
+/* Choose Our App Section CSS Start */
+.choose-our-app-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+.choose-our-app-section .section-desc {
+  width: 58%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1099.98px) {
+  .choose-our-app-section .section-desc {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .choose-our-app-section .section-desc {
+    width: 100%;
+  }
+}
+
+.choose-our-app-section .choose-app {
+  margin-top: 6rem;
+}
+
+@media (max-width: 767.98px) {
+  .choose-our-app-section .choose-app {
+    margin-top: 3rem;
+  }
+}
+
+.choose-our-app-section .choose-app figure {
+  width: 8.8rem;
+  height: 8.8rem;
+  margin: auto;
+}
+
+.choose-our-app-section .choose-app .dev-icon {
+  background: #ffecef;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .award-icon {
+  background: #eaf9ff;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .cloud-icon {
+  background: #fff6d3;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .customize-icon {
+  background: #eaffee;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .ux-icon {
+  background: #f4f4ff;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .support-icon {
+  background: #fdeee4;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.choose-our-app-section .choose-app .feature-title {
+  font-size: 2rem;
+  color: #242f51;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.choose-our-app-section .choose-app .feature-desc {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Choose Our App Section CSS End */
+/* Ultimate Features Section CSS Start */
+.ultimate-features-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+  max-width: 40rem;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .section-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ultimate-features-section .section-desc {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  width: 80%;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .section-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ultimate-features-section .section-desc {
+    width: 100%;
+  }
+}
+
+.ultimate-features-section .ultimate-feature {
+  margin-top: 4.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .ultimate-features-section .ultimate-feature {
+    margin-top: 3rem;
+  }
+}
+
+.ultimate-features-section .ultimate-feature figure {
+  width: 8.8rem;
+  height: 8.8rem;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .ultimate-feature figure {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ultimate-features-section .ultimate-feature .dev-icon {
+  background: #ffecef;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.ultimate-features-section .ultimate-feature .ux-icon {
+  background: #f4f4ff;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.ultimate-features-section .ultimate-feature .cloud-icon {
+  background: #fff6d3;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.ultimate-features-section .ultimate-feature .support-icon {
+  background: #fdeee4;
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.ultimate-features-section .ultimate-feature .feature-title {
+  font-size: 2rem;
+  color: #242f51;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .ultimate-feature .feature-title {
+    text-align: center;
+  }
+}
+
+.ultimate-features-section .ultimate-feature .feature-desc {
+  width: 92%;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .ultimate-feature .feature-desc {
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .ultimate-feature-img {
+    margin-top: 5rem;
+  }
+}
+
+.ultimate-features-section .default-btn {
+  max-width: 17rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 991.98px) {
+  .ultimate-features-section .default-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ultimate Features Section CSS End */
+/* Pricing Section CSS Start */
+.pricing-section {
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.pricing-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+  max-width: 60rem;
+}
+
+.pricing-section .section-desc {
+  width: 58%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .pricing-section .section-desc {
+    width: 100%;
+  }
+}
+
+.pricing-section .pricing-tab {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  width: 28rem;
+  height: 5.5rem;
+  border: 0.2rem solid #ebebeb;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.pricing-section .pricing-tab button {
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+  border: none;
+  background: none;
+  color: #616368;
+  font-weight: 500;
+}
+
+.pricing-section .pricing-tab .active {
+  background: #2500f9;
+  color: #fff;
+}
+
+.pricing-section .pricing-card-wrapper {
+  box-shadow: 0 0 20px 0.5px #f1f1f1;
+  border-radius: 1rem;
+}
+
+.pricing-section .pricing-card-wrapper:hover {
+  box-shadow: 0 0 10px 1px #dddddd;
+}
+
+@media (max-width: 991.98px) {
+  .pricing-section .pricing-card-wrapper {
+    margin-top: 2rem;
+    border: 2px solid #ebebeb;
+  }
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-header {
+  padding: 4rem 0 2.2rem;
+  background: linear-gradient(#fdfdfe, #f4f6f9);
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media (max-width: 991.98px) {
+  .pricing-section .pricing-card-wrapper .pricing-card-header {
+    padding: 2rem 0;
+  }
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-header p {
+  color: #999ca5;
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-header p .amount {
+  font-size: 6rem;
+  font-weight: 600;
+  display: inline-block;
+  color: #242f51;
+}
+
+@media (max-width: 991.98px) {
+  .pricing-section .pricing-card-wrapper .pricing-card-header p .amount {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pricing-section .pricing-card-wrapper .pricing-card-header p .amount {
+    font-size: 4rem;
+  }
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-header .package-title {
+  font-size: 2rem;
+  color: #242f51;
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-features {
+  padding: 4rem 0 2.5rem;
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-features ul li {
+  padding: 1.2rem 0;
+  color: #999ca5;
+}
+
+.pricing-section .pricing-card-wrapper .pricing-card-features .trial-link {
+  color: #2500f9;
+  display: block;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.pricing-section .focused {
+  border: 2px solid #ebebeb;
+}
+
+/* Pricing Section CSS End */
+/* Testimonial Section CSS Start */
+.testimonial-section {
+  position: relative;
+}
+
+.testimonial-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+@media (max-width: 991.98px) {
+  .testimonial-section .section-heading {
+    text-align: center;
+    margin: 5rem auto 0;
+  }
+}
+
+.testimonial-section .section-desc {
+  margin-top: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .testimonial-section .section-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.testimonial-section .control {
+  position: absolute;
+  bottom: 3rem;
+  right: 0;
+  width: 12rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 575.98px) {
+  .testimonial-section .control {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -7rem;
+  }
+}
+
+.testimonial-section .control hr {
+  width: 0.2rem;
+  height: 2.5rem;
+  margin: 0;
+}
+
+.testimonial-section .carousel-control-next,
+.testimonial-section .carousel-control-prev {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #afaeae;
+  background: #fff;
+}
+
+.testimonial-section .carousel-control-next:hover,
+.testimonial-section .carousel-control-prev:hover {
+  background: #d8d8d8;
+  border: 0.2rem solid #d8d8d8;
+}
+
+.testimonial-section .carousel-control-next:hover svg,
+.testimonial-section .carousel-control-prev:hover svg {
+  stroke: #2500f9;
+}
+
+.testimonial-section .stars {
+  margin: 3rem 0 2rem;
+}
+
+.testimonial-section .review-subject {
+  font-size: 2rem;
+  color: #242f51;
+  margin-bottom: 2rem;
+}
+
+.testimonial-section .client {
+  margin-top: 5rem;
+}
+
+.testimonial-section .client .client-info {
+  margin-left: 3rem;
+}
+
+.testimonial-section .client .client-info .client-name {
+  font-size: 1.8rem;
+  color: #242f51;
+}
+
+.testimonial-section .client .client-info .client-designation {
+  font-size: 1.8rem;
+}
+
+/* Testimonial Section CSS End */
+/* FAQ Section CSS Start */
+.faq-section {
+  border-bottom: 0.2rem solid #f4f4f4;
+}
+
+@media (max-width: 575.98px) {
+  .faq-section {
+    padding-top: 10.5rem;
+  }
+}
+
+.faq-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+.faq-section .section-desc {
+  margin-top: 2rem;
+  width: 58%;
+}
+
+@media (max-width: 575.98px) {
+  .faq-section .section-desc {
+    width: 100%;
+  }
+}
+
+.faq-section .accordion {
+  margin-top: 4.8rem;
+}
+
+.faq-section .accordion .accordion-item {
+  background: #f5f7fa;
+  margin-bottom: 1rem;
+}
+
+.faq-section .accordion .accordion-item .accordion-button {
+  border: none;
+  font-size: 2rem;
+  color: #242f51;
+  font-weight: 600;
+  padding: 2.3rem 4.6rem;
+}
+
+@media (max-width: 991.98px) {
+  .faq-section .accordion .accordion-item .accordion-button {
+    padding: 2.3rem;
+  }
+}
+
+.faq-section .accordion .accordion-item .accordion-button:focus {
+  background: none;
+  box-shadow: none;
+}
+
+.faq-section .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background: none;
+  box-shadow: none;
+}
+
+.faq-section .accordion .accordion-item .accordion-button::after {
+  background-image: url(../assets/icons/svg/dash.svg);
+  background-size: cover;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+}
+
+.faq-section .accordion .accordion-item .collapsed::after {
+  background-image: url(../assets/icons/svg/plus.svg);
+}
+
+.faq-section .accordion .accordion-item .accordion-collapse {
+  border: none !important;
+}
+
+.faq-section .accordion .accordion-item .accordion-collapse .accordion-body {
+  padding: 0 4.6rem 2.3rem;
+}
+
+@media (max-width: 991.98px) {
+  .faq-section .accordion .accordion-item .accordion-collapse .accordion-body {
+    padding: 0 2.3rem 2.3rem;
+  }
+}
+
+.faq-section .accordion .accordion-item .accordion-collapse:last-of-type .accordion-collapse {
+  border-bottom-width: 0px !important;
+  border-radius: 0px;
+}
+
+/* FAQ Section CSS End */
+/* Download App Section CSS Start */
+.download-app-section {
+  padding-bottom: 0;
+  margin-bottom: 7rem;
+}
+
+.download-app-section .section-heading {
+  font-size: 3.6rem;
+  line-height: 4.6rem;
+  color: #242f51;
+  max-width: 44rem;
+}
+
+@media (max-width: 767.98px) {
+  .download-app-section .section-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.download-app-section .section-desc {
+  margin-top: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .download-app-section .section-desc {
+    text-align: center;
+  }
+}
+
+.download-app-section .app-download-wrapper {
+  margin-top: 3rem;
+}
+
+@media (max-width: 767.98px) {
+  .download-app-section .app-download-wrapper {
+    text-align: center;
+  }
+}
+
+.download-app-section .app-download-wrapper img {
+  margin-right: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .download-app-section .app-download-wrapper img {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    display: block;
+  }
+}
+
+.download-app-section .footer-img-div {
+  background-image: url(../assets/vector-art/footer-uper2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-bottom: -7rem;
+}
+
+@media (max-width: 991.98px) {
+  .download-app-section .footer-img-div {
+    height: 36rem;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .download-app-section .footer-img-div {
+    height: 22rem;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .download-app-section .footer-img-div {
+    height: 19rem;
+  }
+}
+
+@media (max-width: 299.98px) {
+  .download-app-section .footer-img-div {
+    height: 14rem;
+  }
+}
+
+/* Download App Section CSS End */
+/* Footer Section CSS Start */
+.footer-section {
+  padding: 7rem 0;
+  background: #09132d;
+}
+
+@media (max-width: 767.98px) {
+  .footer-section {
+    padding: 4rem 0;
+  }
+}
+
+.footer-section .footer-logo a {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}
+
+.footer-section .footer-logo a span {
+  color: #fcae61;
+}
+
+.footer-section .footer-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+@media (max-width: 767.98px) {
+  .footer-section .footer-links {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.footer-section .footer-links li {
+  padding: 0 1.8rem;
+}
+
+@media (max-width: 767.98px) {
+  .footer-section .footer-links li {
+    padding: 1.5rem 0;
+  }
+}
+
+.footer-section .footer-links li:hover a {
+  color: #fcae61 !important;
+}
+
+.footer-section .social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+@media (max-width: 767.98px) {
+  .footer-section .social-links {
+    margin-top: 2rem;
+  }
+}
+
+.footer-section .social-links li {
+  padding: 0 2rem;
+  font-size: 3rem;
+}
+
+.footer-section .social-links li a {
+  color: #273043;
+}
+
+.footer-section .social-links li a:hover {
+  color: #fff !important;
+}
+
+.footer-section .copyright {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .footer-section .copyright {
+    margin-top: 2rem;
+  }
+}
+
+.footer-section .copyright a {
+  color: #fff;
+}
+
+.footer-section .copyright a:hover {
+  color: #fcae61 !important;
+}
+
+/* Footer Section CSS End */
+/* Bottom to Top Button CSS Start */
+.bottom-to-top {
+  position: fixed;
+  bottom: -4rem;
+  right: 1rem;
+  background: #2500f9;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.bottom-to-top:hover {
+  color: #ffffff;
+}
+
+/* Bottom to Top Button CSS End */
